@@ -1,0 +1,599 @@
+@import url(//fonts.googleapis.com/css?family=Roboto);
+
+body{
+    margin: 0;
+    display:flex;
+    flex-direction: column;
+    font-family: "Roboto";
+}
+
+.bar
+{
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    background-color:cornsilk;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    border-bottom: 1px solid gray;
+    
+}
+
+.bar-item
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    flex-direction: column;
+
+}
+
+.top
+{
+    height: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.top_for_lines
+{
+    height: 75px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.top_for_lines > .inside
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25%;
+    overflow: hidden;
+    flex: 1;
+    border: 1px solid  cornsilk;
+    box-sizing: border-box;
+}
+
+.top_for_lines > .inside_selected
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25%;
+    overflow: hidden;
+    flex: 1;
+    background-image: radial-gradient(cornsilk, rgb(218, 172, 58));
+    border: 1px solid  rgb(221, 154, 77);
+    box-sizing: border-box;
+    
+}
+
+.top_for_lines > .inside > p
+{
+    margin-top: 5px;
+
+}
+
+.top_for_lines > .inside_selected > p
+{
+    margin-top: 5px;
+
+}
+
+.top_for_lines > .inside > h5
+{
+    font-size: 20px;
+
+}
+
+.top_for_lines > .inside > h3
+{
+    font-size: 35px;
+}
+
+.top_for_lines > .inside > h1
+{
+    font-size: 50px;
+}
+
+.top_for_lines > .inside_selected > h5
+{
+    font-size: 20px;
+
+}
+
+.top_for_lines > .inside_selected > h3
+{
+    font-size: 35px;
+}
+
+.top_for_lines > .inside_selected > h1
+{
+    font-size: 50px;
+}
+
+.bottom
+{
+    height: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    background-color:rgb(240, 201, 169);
+}
+
+.inside
+{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    flex: 1;
+    align-items: center;
+    transition: 0.5s;
+    border-right: 1px solid rgb(240, 201, 169);
+    box-sizing: border-box;
+    
+}
+
+.inside_selected
+{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    flex: 1;
+    align-items: center;
+    transition: 0.5s;
+    background-image: radial-gradient( cornsilk, rgb(218, 172, 58));
+    border: 1px solid  rgb(221, 154, 77);
+    box-sizing: border-box;
+    
+}
+
+.inside>img
+{
+    height: 40%;
+    width: 40%;
+    object-fit: contain;
+}
+
+.inside>p{
+    margin-top: 5px;
+    font-size: small;
+    color: gray;
+    font-size: 15px;
+}
+
+.inside_selected>img
+{
+    height: 40%;
+    width: 40%;
+    object-fit: contain;
+}
+
+.inside_selected>p{
+    margin-top: 5px;
+    font-size: small;
+    color:black;
+    font-size: 15px;
+}
+
+.inside-nohover
+{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    flex: 2;
+    align-items: center;
+    border: 1px solid rgb(240, 201, 169);
+    
+}
+
+.inside-picker
+{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    align-items: center;
+    transition: 0.5s;
+    border: 1px solid cornsilk;
+    background-color: rgb(248, 205, 96);
+    
+}
+
+.inside-picker>img
+{
+    height: 80%;
+    width: 80%;
+    object-fit: contain;
+    
+}
+
+.inside-picker:hover{
+
+    background-image: radial-gradient(cornsilk,rgb(233, 188, 138));
+    border: 1px solid  rgb(221, 154, 77);
+}
+
+.inside-nohover > .inside-line
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+}
+
+.inside-nohover > .inside-line > .color
+{
+    display: flex;
+    height: 75%;
+    width: 30%;
+    border-style: inset;
+}
+.inside-nohover > .inside-line > .shape
+{
+    display: flex;
+    height: 100%;
+    flex: 1;
+    transition: 0.5;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid cornsilk;
+    box-sizing: border-box;
+
+}
+
+.inside-nohover > .inside-line > .shape_selected
+{
+    display: flex;
+    height: 100%;
+    flex: 1;
+    transition: 0.5;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient( cornsilk, rgb(218, 172, 58));
+    border: 1px solid  rgb(221, 154, 77);
+    box-sizing: border-box;
+
+}
+
+.inside-nohover > .inside-line > .shape_selected > img
+{
+    height: 70%;
+    width: 70%;
+    object-fit: contain;
+}
+
+.inside-nohover > .inside-line > .shape:hover
+{
+    background-image: radial-gradient(cornsilk,rgb(233, 188, 138));
+    border: 1px solid  rgb(221, 154, 77);
+    box-sizing: border-box;
+
+}
+.inside-nohover > .inside-line > .shape > img
+{
+    height: 70%;
+    width: 70%;
+    object-fit: contain;
+}
+
+
+
+.inside-nohover > .inside-line > .color:hover
+{
+    border-style: inset;
+    border-color:  rgb(221, 154, 77);
+}
+
+.inside-nohover > .inside-line > .color_selected
+{
+    display: flex;
+    height: 75%;
+    width: 30%;
+    border-style: inset;
+    border-color:  gold;
+}
+
+.inside:hover{
+
+    background-image: radial-gradient(cornsilk,rgb(233, 188, 138));
+    border-right: 1px solid  rgb(221, 154, 77);
+    box-sizing: border-box;
+}
+
+
+
+.canvas-space
+{
+    margin-top: 100px;
+    width: 100vw;
+    height: 80vh;
+    overflow: scroll;
+    background-color: rgb(156, 154, 154);
+}
+
+svg{
+    position: relative;
+    width: 3000px;
+    height: 3000px;
+    background-color: white;
+    box-shadow: 16px 16px 16px 16px rgba(0,0,0,0.2);
+
+}
+
+.footer
+{
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    margin-top: calc(80vh + 100px);
+    background-color:cornsilk;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+    border-top: 1px solid gray;
+    
+}
+
+.footer-item
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.background_modal
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    top: 0;
+    z-index: 3;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.download_modal
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5%;
+    width: 40%;
+    height: 70%;
+    background-color:cornsilk;
+    position: relative;
+    border-radius: 10px;
+    color: rgb(165, 116, 42);
+    border: 5px solid  rgb(221, 154, 77);
+
+}
+
+
+.group2
+{
+    display: flex;
+}
+
+.group2 > .radio
+{
+    width: 1vw;
+    height: 1vw;
+    border-radius: 35px;
+    border: 10px solid  rgb(221, 154, 77);
+    background-color: rgb(187, 136, 59);
+    margin-top: 5%; 
+    cursor: pointer;
+}
+
+.group2 > .radio_selected
+{
+    width: 1vw;
+    height: 1vw;
+    border-radius: 35px;
+    border: 10px solid rgb(221, 154, 77);
+    background-color: rgb(252, 201, 0);
+    margin-top: 5%; 
+    cursor: pointer;
+}
+
+.group2 > p{
+    margin-bottom: 10%;
+}
+
+.download_modal > button
+{
+    width: 20%;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 2px;
+    border: 2px solid  rgb(221, 154, 77);
+    color: rgb(165, 116, 42);
+    margin-top: 10%;
+    font-size: 100%;
+    height: 8%;
+    width: 30%;
+}
+
+.group > input
+{
+    border: 2px solid  rgb(221, 154, 77)
+}
+
+.close{
+    position: absolute;
+    top:5px;
+    right: 15px;
+    font-size: 5em;
+    cursor: pointer;
+    transform: rotate(45deg);
+
+}
+
+.close1{
+    position: absolute;
+    top:5px;
+    right: 15px;
+    font-size: 5em;
+    cursor: pointer;
+    transform: rotate(45deg);
+
+}
+
+.background_modal1
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    top: 0;
+    z-index: 3;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.resize_modal
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5%;
+    width: 40%;
+    height: 70%;
+    background-color:cornsilk;
+    position: relative;
+    border-radius: 10px;
+    color: rgb(165, 116, 42);
+    border: 5px solid  rgb(221, 154, 77);
+
+}
+
+.resize_modal > button
+{
+    width: 20%;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 2px;
+    border: 2px solid  rgb(221, 154, 77);
+    color: rgb(165, 116, 42);
+    margin-top: 10%;
+    font-size: 100%;
+    height: 8%;
+    width: 20%;
+}
+
+.close2{
+    position: absolute;
+    top:5px;
+    right: 15px;
+    font-size: 5em;
+    cursor: pointer;
+    transform: rotate(45deg);
+
+}
+
+.background_modal2
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    top: 0;
+    z-index: 3;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.colors_modal
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5%;
+    width: 40%;
+    height: 70%;
+    background-color:cornsilk;
+    position: relative;
+    border-radius: 10px;
+    color: rgb(165, 116, 42);
+    border: 5px solid  rgb(221, 154, 77);
+
+}
+
+#canvas
+{
+    margin-top: 5%;
+    cursor: crosshair;
+}
+
+#canvas1
+{
+    margin-top: 10%;
+    cursor: crosshair;
+}
+
+.colors_modal > button
+{
+    width: 20%;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 2px;
+    border: 2px solid  rgb(221, 154, 77);
+    color: rgb(165, 116, 42);
+    margin-top: 10%;
+    font-size: 100%;
+    height: 8%;
+    width: 20%;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: rgb(36, 36, 36);
+    
+ 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(214, 186, 75); 
+    border-radius: 20px;
+
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(146, 118, 7); 
+
+  }

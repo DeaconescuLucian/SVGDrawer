@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="6_1079_DEACONESCU_Lucian.js">
+        </script>
+        <link rel="stylesheet" href="6_1079_DEACONESCU_Lucian.css">
+    </head>
+    <body id="body">
+        <div class="bar">
+            <div class="bar-item" id="export">
+                <div class="top">
+                    <div class="inside" id="new" title="New File"><p>New File</p><img src="media/new-file.png" alt=""></div>
+                    <div class="inside" id="save" title="Save File"><p>Save File</p><img src="media/save-file.png" alt=""></div>
+                </div>
+                <div class="bottom">FILE</div>
+            </div>
+            <div class="bar-item" id="image">
+                <div class="top">
+                    <div class="inside" id="select"><p>Select</p><img src="media/crop.png" alt=""></div>
+                    <div class="inside" id="resize"><p>Resize</p><img src="media/resize.png" alt=""></div>
+                </div>
+                <div class="bottom">IMAGE</div>
+            </div>
+            <div class="bar-item" id="tools">
+                <div class="top">
+                    <div class="inside-nohover">
+                        <div class="inside-line">
+                            <div class="shape" id="undo"><img src="media/undo.png"></div>
+                            <div class="shape" id="to_front"><img src="media/front.png"></div>
+                            <div class="shape" id="background"><img src="media/background.png"></div>
+                            <div class="shape" id="to_back"><img src="media/back.png"></div>
+                            <div class="shape" id="redo"><img src="media/redo.png"></div>
+                        </div>
+                        <div class="inside-line">
+                            <div class="shape_selected" id="pen"><img src="media/pen.png"></div>
+                            <div class="shape" id="move"><img src="media/move.png"></div>
+                            <div class="shape" id="edit_points"><img src="media/anchor-point.png"></div>
+                            <div class="shape" id="fill"><img src="media/paint-bucket.png"></div>
+                            <div class="shape" id="delete"><img src="media/trash.png"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom">TOOLS</div>
+            </div>
+            <div class="bar-item" id="shapes">
+                <div class="top">
+                    <div class="inside-nohover">
+                        <div class="inside-line">
+                            <div class="shape" id="circle"><img src="media/circle.png"></div>
+                            <div class="shape" id="ellipse"><img src="media/ellipse.png"></div>
+                            <div class="shape" id="square"><img src="media/square.png"></div>
+                            <div class="shape" id="polygon"><img src="media/polygon.png"></div>
+                        </div>
+                        <div class="inside-line">
+                            <div class="shape" id="line"><img src="media/line.png"></div>
+                            <div class="shape" id="curved_line"><img src="media/curved-line.png"></div>
+                            <div class="shape" id="rounded_square"><img src="media/rounded_square.png"></div>
+                            <div class="shape" id="triangle"><img src="media/triangle.png"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom">SHAPES</div>
+            </div>
+            <div class="bar-item" id="line-size">
+                <div class="top_for_lines">
+                    <div class="inside_selected" id="l1"><p>_____</p></div>
+                    <div class="inside" id="l2"><h5>_____</p></div>
+                    <div class="inside" id="l3"><h3>_____</p></div>
+                    <div class="inside" id="l4"><h1>_____</p></div>
+                </div>
+                <div class="bottom">LINE SIZE</div>
+            </div>
+            <div class="bar-item" id="colors">
+                <div class="top">
+                    <div class="inside-nohover">
+                        <div class="inside-line">
+                            <div class="color" id="color1" style="background-color:black;"></div>
+                            <div class="color" id="color2" style="background-color:white;"></div>
+                            <div class="color" id="color3" style="background-color:gray;"></div>
+                        </div>
+                        <div class="inside-line">
+                            <div class="color" id="color4" style="background-color:red;"></div>
+                            <div class="color" id="color5" style="background-color:blue;"></div>
+                            <div class="color" id="color6" style="background-color:green;"></div>
+                        </div>
+                    </div>
+                    <div class="inside-nohover">
+                        <div class="inside-line">
+                            <div class="color" id="color7" style="background-color:yellow;"></div>
+                            <div class="color" id="color8" style="background-color:magenta;"></div>
+                            <div class="color" id="color9" style="background-color:cyan;"></div>
+                        </div>
+                        <div class="inside-line">
+                            <div class="color" id="color10"></div>
+                            <div class="color" id="color11"></div>
+                            <div class="color" id="color12"></div>
+                        </div>
+                    </div>
+                    <div class="inside-picker" id="choose_color">
+                        <img src="media/color-wheel.png" alt="">
+                    </div>
+                </div>
+                <div class="bottom">COLORS</div>
+            </div>
+        </div>
+        <div class="canvas-space">
+            <svg id="svg" xmlns="http://www.w3.org/2000/svg"><path d=" " style="stroke:#ff0000;stroke-width:1;stroke-linecap:round;fill:none" id=0></path>
+            </svg> 
+        </div>
+        <div class="footer">
+            <div class="footer-item" id="location">LOCATION:</div>
+            <div class="footer-item" id="size">SIZE:</div>
+        </div>
+        <div class="background_modal">
+            <div class="download_modal">
+                <div class="close">+</div>
+                <h1>Save your work!</h1>
+                <div class="group">
+                    <h3>Choose your file name:</h3>
+                    <input type="text" placeholder="File Name" id="i_file">
+                </div>
+                <div class="group">
+                    <h3>Choose extension:</h3>
+                    <div class="group2">
+                    <div class="radio_selected" id="png"></div>
+                    <p>.png</p>
+                </div>
+                <div class="group2">
+                    <div class="radio" id="jpeg"></div>
+                    <p>.jpeg</p>
+                </div>
+                <div class="group2">
+                    <div class="radio" id="svg_ext"></div>
+                    <p>.svg</p>
+                    </div>
+                </div>
+                <button id="download">Download</button>
+            </div>
+        </div>
+        <div class="background_modal1">
+            <div class="resize_modal">
+                <div class="close1">+</div>
+                <h1>Resize canvas.</h1>
+                <div class="group">
+                    <h3>WIDTH:</h3>
+                    <input type="text" placeholder="Width" id="i_width">
+                </div>
+                <div class="group">
+                    <h3>HEIGHT:</h3>
+                    <input type="text" placeholder="Height" id="i_height">
+                </div>
+                <button id="res">Resize</button>
+            </div>
+        </div>
+        <div class="background_modal2">
+            <div class="colors_modal">
+                <div class="close2">+</div>
+                <h3>Choose the color you like.</h3>
+                <div>
+                <canvas id="canvas2" width="200" height="100"></canvas>
+                <canvas id="canvas1" width="200" height="100"></canvas>
+                </div>
+                <canvas id="canvas" width="200" height="100"></canvas>
+                <button id="choose">Choose color</button>
+            </div>
+        </div>
+    </body>
+    
+</html>
